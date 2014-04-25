@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HConsole</name>
+    </assembly>
+    <members>
+        <member name="T:HConsole.App">
+            <summary>
+            Class for provide function in terms of app ui
+            </summary>
+        </member>
+        <member name="T:HConsole.CUI">
+            <summary>
+            Console UI functions as static class
+            </summary>
+        </member>
+        <member name="M:HConsole.CUI.WriteAppHeader">
+            <summary>
+            
+            </summary>
+            <param name="appName"></param>
+        </member>
+        <member name="M:HConsole.CUI.WriteHorizontalLine">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HConsole.CUI.WaitForInput(System.String)">
+            <summary>
+            wait for user input
+            <param name="message">optional message</param>
+            </summary>
+        </member>
+        <member name="M:HConsole.CUI.WriteText(System.String,HConsole.Align,System.Char)">
+            <summary>
+            Write text wrapped with arm
+            </summary>
+            <param name="text">Text for wrapping</param>
+            <param name="fillToken">Token for creating arms</param>
+        </member>
+        <member name="M:HConsole.CUI.Ask``1(System.String)">
+            <summary>
+            Question write to console, and return user answer
+            </summary>
+            <typeparam name="T">type of user answer</typeparam>
+            <param name="question">question text</param>
+        </member>
+        <member name="M:HConsole.CUI.Password(System.String)">
+            <summary>
+            Ask user to password and return as SecureString
+            </summary>
+            <param name="question">question text</param>
+        </member>
+        <member name="T:HConsole.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:HConsole.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:HConsole.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:HConsole.Properties.Resources.error_wrong_answer_type">
+            <summary>
+              Looks up a localized string similar to &quot;Vaše odpověď byla v nesprávném formátu. Napište ji znovu.&quot;.
+            </summary>
+        </member>
+    </members>
+</doc>

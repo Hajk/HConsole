@@ -24,7 +24,11 @@ namespace SampleConsole
         }
 
         private static void GenerateKey()
-        {
+        { 
+            string heslo = CUI.Ask<string>("Napiš heslo");
+
+            CUI.WriteText(heslo + "kokaláda", Align.Left);
+
             Console.WriteLine("This is process of generating key...");
         }
     }

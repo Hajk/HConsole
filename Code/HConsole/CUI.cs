@@ -1,4 +1,5 @@
-﻿
+﻿using System.Security;
+
 namespace HConsole
 {
     // facade for provide main functionality as static class
@@ -47,6 +48,25 @@ namespace HConsole
         public static void WriteText(string text, Align align = Align.Left, char fillToken = ' ')
         {
             ConsoleCore.WriteText(text, align, fillToken);
+        }
+
+        /// <summary>
+        /// Question write to console, and return user answer
+        /// </summary>
+        /// <typeparam name="T">type of user answer</typeparam>
+        /// <param name="question">question text</param>
+        public static T Ask<T>(string question)
+        {
+            return Controls.Ask<T>(question);
+        }
+
+        /// <summary>
+        /// Ask user to password and return as SecureString
+        /// </summary>
+        /// <param name="question">question text</param>
+        public static SecureString Password(string question)
+        {
+            return Controls.Password(question);
         }
         #endregion
 

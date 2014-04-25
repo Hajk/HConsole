@@ -23,13 +23,31 @@ namespace HConsole
 
         public static void WriteText(string text, Align align = Align.Left, char fillToken = ' ', char sideToken = ' ')
         {
-            int armLength = (Constants.FRAME_WIDTH - text.Length) / 2 - 1; // (frame - text) / 2 - (sideToken * 2)
+            string output = string.Empty;
 
-            string arm = new string(fillToken, armLength);
-            string oddToken = text.Length % 2 != 0 ? string.Empty : fillToken.ToString();
+            switch (align)
+            {
+                case Align.Left:
+                    goto default;
+
+                case Align.Right:
+                    throw new NotImplementedException();
+
+                case Align.Center:
+                    int armLength = (Constants.FRAME_WIDTH - text.Length) / 2 - 1; // (frame - text) / 2 - (sideToken * 2)
+                    string arm = new string(fillToken, armLength);
+                    string oddToken = text.Length % 2 != 0 ? string.Empty : fillToken.ToString();
+                    output = sideToken + arm + text + arm + oddToken + sideToken;
+                    break;
+
+                default:
+                    output = text;
+                    break;
+            }
 
 
-            string output = sideToken + arm + text + arm + oddToken + sideToken;
+
+            
             Console.WriteLine(output);
         }
     }
